@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zielona kraina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+        $(function () {
+            $('a').click(function () {
+                var windowWidth = $(window).width();
+                var offset = 0;
+                if (windowWidth < 768) {
+                    offset = 71;
+                } else if (windowWidth < 992) {
+                    offset = 100;
+
+                } else if (windowWidth < 1200) {
+                    offset = 180;
+                } else {
+                    offset = 170;
+                }
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - offset
+                    }, 1000);
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+<body id="home">
+<header id="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-custom">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="prop1.html">
+                        <img src="images/menu_gorne_logo.png" alt="Logotyp Zielona Kraina">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#main-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="navbar-collapse collapse" id="main-navbar-collapse">
+
+                    <ul id="menu-list" class="nav navbar-nav">
+                        <li><a href="#home" data-scroll="">Home</a></li>
+                        <li><a href="#aktualnosci" data-scroll="">Aktualności</a></li>
+                        <li><a href="#galerie" data-scroll="">Galerie</a></li>
+                        <li><a href="#przepisy" data-scroll="">Przepisy</a></li>
+                        <li><a href="#dla-rodzicow" data-scroll="">Dla rodziców</a></li>
+                        <li><a href="#organizatorzy" data-scroll="">Organizatorzy</a></li>
+                        <li><a href="#polecamy" data-scroll="">Polecamy</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+</header>
+
+<section class="slider ">
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/slice_4_1.png" alt="Chania">
+                </div>
+
+                <div class="item">
+                    <img src="images/slice_4_0.png" alt="Chania">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="project-background">
+    <div class="container">
+        <div class="section-title">
+            <h2>tło projektu</h2>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet lorem. Phasellus tempor pede id felis. Morbi pede. Mauris nec scelerisque lorem
+            velit in faucibus et, posuere eget, blandit suscipit, velit magna, tincidunt est massa nisl, faucibus
+            turpis. Nullam at libero. Donec lectus nec lectus vulputate imperdiet, neque eu lectus. Vestibulum cursus
+            ligula sit amet elit eu odio fermentum libero at eros. Aliquam auctor velit. Nullam aliquet, dui quis
+            viverra accumsan. Vestibulum fermentum. Vivamus consectetuer vulputate sed, dapibus imperdiet velit justo ac
+            felis non elit iaculis in, odio. Aliquam vestibulum tincidunt tempus. Morbi nisl neque vitae odio
+            condimentum nunc. Phasellus fermentum, metus nisl pede, at lorem tempus arcu. Mauris at sapien dui convallis
+            varius. In urna. Donec non eros. In hac habitasse platea dictumst. Proin id magna. Fusce quam molestie augue
+            leo, suscipit in, dui. Morbi scelerisque odio et.</p>
+
+        <p>Aenean ac nisl. Etiam vestibulum lectus blandit a, condimentum nunc. Phasellus placerat vestibulum. Nulla
+            diam neque quis neque tortor lacus ultrices posuere cubilia Curae, Phasellus tellus dolor in sapien. Proin
+            cursus a, dolor. Vestibulum egestas volutpat. Pellentesque laoreet risus. Suspendisse placerat nisl mollis
+            aliquam, wisi sapien faucibus non, posuere sed, ultrices ut, consequat lacus quis diam ac risus. Aliquam
+            erat a nunc. Nunc a dolor. Nullam semper lobortis. In accumsan eu, tellus. Nunc justo. Maecenas felis.
+            Mauris at fermentum erat. Quisque sed lacus. Vivamus ut erat. In turpis metus dolor, scelerisque urna quis
+            placerat ante. Proin cursus, nibh quis enim. Cras ut justo a diam. Morbi facilisis risus. Sed in faucibus
+            eu.</p>
+
+        <p>Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere mattis
+            egestas, justo nulla, accumsan placerat faucibus. Nunc viverra, dui at magna. Nulla porta urna. Donec orci.
+            Sed molestie, felis a nunc. Praesent quis velit. Donec mi. Aenean ac nunc. Nam consectetuer at, posuere
+            cubilia Curae, Nullam in consequat nunc. Etiam aliquam dictum a, tortor. Nulla consectetuer, augue eget est
+            eu lorem. Curabitur condimentum ac, magna. Suspendisse fringilla fringilla orci. Nullam justo. Donec id
+            rutrum et, tincidunt est et libero. Donec non mi non eros lacus, elementum dui. Morbi accumsan mollis
+            sodales. Aenean sed nunc commodo vehicula, feugiat at, lacus. Vestibulum eget.</p>
+
+        <div class="arrow-container">
+            <a href="">
+                <span class="arrow"></span>
+            </a>
+        </div>
+
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+    </div>
+</section>
+
+<section class="news" id="aktualnosci">
+    <div class="container">
+        <div class="section-title">
+            <h2>aktualności</h2>
+        </div>
+
+        <div class="row">
+
+            <article class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+                <div class="row">
+                    <div class="new-photo col-md-4 col-lg-6">
+                        <img src="images/new-img.png">
+                    </div>
+                    <div class="new-content col-md-5 col-lg-6">
+                        <h5>Wkrótce będziemy edukować młodych Wrocławian</h5>
+                        <p>Dzięki rozszerzeniu współpracy sponsorskiej, zaczynamy obejmować edukacją żywieniową
+                            kolejne polskie miasta</p>
+                        <div class="arrow-container-small">
+                            <a href="">
+                                <span class="arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+                <div class="row">
+                    <div class="new-photo col-md-4 col-lg-6">
+                        <img src="images/new-img.png">
+                    </div>
+                    <div class="new-content col-md-5 col-lg-6">
+                        <h5>Wkrótce będziemy edukować młodych Wrocławian</h5>
+                        <p>Dzięki rozszerzeniu współpracy sponsorskiej, zaczynamy obejmować edukacją żywieniową
+                            kolejne polskie miasta</p>
+                        <div class="arrow-container-small">
+                            <a href="">
+                                <span class="arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="row">
+
+            <article class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+                <div class="row">
+                    <div class="new-content col-md-5 col-lg-6">
+                        <h5>Wkrótce będziemy edukować młodych Wrocławian</h5>
+                        <p>Dzięki rozszerzeniu współpracy sponsorskiej, zaczynamy obejmować edukacją żywieniową
+                            kolejne polskie miasta</p>
+                        <div class="arrow-container-small">
+                            <a href="">
+                                <span class="arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="new-photo col-md-4 col-lg-6">
+                        <img src="images/new-img.png">
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+                <div class="row">
+                    <div class="new-content col-md-5 col-lg-6">
+                        <h5>Wkrótce będziemy edukować młodych Wrocławian</h5>
+                        <p>Dzięki rozszerzeniu współpracy sponsorskiej, zaczynamy obejmować edukacją żywieniową
+                            kolejne polskie miasta</p>
+                        <div class="arrow-container-small">
+                            <a href="">
+                                <span class="arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="new-photo col-md-4 col-lg-6">
+                        <img src="images/new-img.png">
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="arrow-container">
+            <a href="">
+                <span class="arrow"></span>
+            </a>
+        </div>
+
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+
+    </div>
+</section>
+
+<section class="workshop-profile" id="polecamy">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>profil warsztatów</h2>
+        </div>
+
+        <dl class="dl-horizontal">
+            <dt>Cel:</dt>
+            <dd>Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere mattis
+                egestas
+            </dd>
+            <dt>Grupa docelowa:</dt>
+            <dd>Vivamus volutpat odio a velit pede bibendum mi</dd>
+            <dt>Czas trwania projektu:</dt>
+            <dd>Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere</dd>
+            <dt>Zakres:</dt>
+            <dd>Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat</dd>
+            <dt>Forma:</dt>
+            <dd>Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere mattis
+                egestas, justo nulla Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat
+                nec, posuere mattis egestas, justo nulla
+            </dd>
+            <dt>Charakter:</dt>
+            <dd>Vivamus volutpat</dd>
+            <dt>Prowadzący:</dt>
+            <dd>Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere mattis
+                egestas, justo nulla
+                Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere mattis
+                egestas, justo nulla
+                Vivamus volutpat odio a velit pede bibendum mi, eu turpis vulputate vitae, placerat nec, posuere mattis
+                egestas, justo nulla
+            </dd>
+            <dt>Regulamin:</dt>
+            <dd><a href="">kliknij tutaj</a></dd>
+        </dl>
+
+        <div class="ring"></div>
+
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+
+    </div>
+
+    <div class="section-line">
+        <hr class="dark-line">
+        <hr class="bright-line">
+    </div>
+
+</section>
+
+<section class="gallery" id="galerie">
+    <div class="container">
+        <div class="section-title">
+            <h2>galeria</h2>
+        </div>
+
+        <div class="all-photos">
+            <div class="row">
+                <div class="photo col-md-4 col-sm-6">
+                    <figure>
+                        <img src="images/gallery-photo.png"/>
+                        <div>
+                            <h5>Przedszkole nr 222 - zajęcia dla rodziców z dziećmi / 15.02.2016</h5>
+                            <div class="arrow-hover-container">
+                                <a href="">
+                                    <span class="arrow-hover"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="photo midd col-md-4 col-sm-6">
+                    <figure>
+                        <img src="images/gallery-photo.png"/>
+                        <div>
+                            <h5>Przedszkole nr 222 - zajęcia dla rodziców z dziećmi / 15.02.2016</h5>
+                            <div class="arrow-hover-container">
+                                <a href="">
+                                    <span class="arrow-hover"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="photo col-md-4 col-sm-6">
+                    <figure>
+                        <img src="images/gallery-photo.png"/>
+                        <div>
+                            <h5>Przedszkole nr 222 - zajęcia dla rodziców z dziećmi / 15.02.2016</h5>
+                            <div class="arrow-hover-container">
+                                <a href="">
+                                    <span class="arrow-hover"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="photo col-md-4 col-sm-6">
+                    <figure>
+                        <img src="images/gallery-photo.png"/>
+                        <div>
+                            <h5>Przedszkole nr 222 - zajęcia dla rodziców z dziećmi / 15.02.2016</h5>
+                            <div class="arrow-hover-container">
+                                <a href="">
+                                    <span class="arrow-hover"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="photo midd col-md-4 col-sm-6">
+                    <figure>
+                        <img src="images/gallery-photo.png"/>
+                        <div>
+                            <h5>Przedszkole nr 222 - zajęcia dla rodziców z dziećmi / 15.02.2016</h5>
+                            <div class="arrow-hover-container">
+                                <a href="">
+                                    <span class="arrow-hover"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="photo col-md-4 col-sm-6">
+                    <figure>
+                        <img src="images/gallery-photo.png"/>
+                        <div>
+                            <h5>Przedszkole nr 222 - zajęcia dla rodziców z dziećmi / 15.02.2016</h5>
+                            <div class="arrow-hover-container">
+                                <a href="">
+                                    <span class="arrow-hover"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+
+    </div>
+</section>
+
+<section class="tutorials" id="przepisy">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>przepisy</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-sm-3 col-sm-offset-1 col-md-offset-1 food">
+                <div class="food-img"></div>
+                <h6>sniadania</h6>
+            </div>
+
+            <div class="col-md-2 col-sm-4 food">
+                <div class="food-img"></div>
+                <h6>II sniadanie</h6>
+            </div>
+
+            <div class="col-md-2 col-sm-3 food">
+                <div class="food-img"></div>
+                <h6>obiad</h6>
+            </div>
+
+            <div class="col-md-2 col-sm-6 food">
+                <div class="food-img"></div>
+                <h6>podwieczorek</h6>
+            </div>
+
+            <div class="col-md-2 col-sm-6 food">
+                <div class="food-img"></div>
+                <h6>kolacja</h6>
+            </div>
+
+        </div>
+
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+
+    </div>
+</section>
+
+<section class="for-parents" id="dla-rodzicow">
+    <div class="container">
+        <div class="section-title">
+            <h2>dla rodziców</h2>
+        </div>
+
+        <div class="desktop-table">
+            <div class="row desktop-border">
+                <span class="col-md-1"></span>
+                <div class="col-md-10">
+                    <div class="row">
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                    </div>
+                </div>
+                <span class="col-md-1"></span>
+            </div>
+
+            <div class="row">
+                <span class="col-md-2"></span>
+
+                <div class="col-md-8">
+                    <div class="row row-content">
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>wpływ żywienia na zdrowie</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>jak postępować z niejadkiem</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="col-md-2"></span>
+            </div>
+
+            <div class="row desktop-border">
+                <span class="col-md-1"></span>
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                    </div>
+                </div>
+
+                <span class="col-md-1"></span>
+            </div>
+
+            <div class="row">
+                <span class="col-md-2"></span>
+
+                <div class="col-md-8">
+                    <div class="row row-content">
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>wpływ żywienia na zdrowie</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>jak postępować z niejadkiem</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="col-md-2"></span>
+            </div>
+
+            <div class="row desktop-border">
+                <span class="col-md-1"></span>
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                    </div>
+                </div>
+
+                <span class="col-md-1"></span>
+            </div>
+
+            <div class="row">
+                <span class="col-md-2"></span>
+
+                <div class="col-md-8">
+                    <div class="row row-content">
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>wpływ żywienia na zdrowie</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+
+                            <span class="col-md-1"></span>
+                        </div>
+
+                        <div class="col-md-4 for-parents-cell">
+                            <h4>jak postępować z niejadkiem</h4>
+                        </div>
+
+                        <div class="row phone-border">
+                            <span class="col-md-1"></span>
+
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span class="col-xs-4 cell-border"></span>
+                                    <span class="col-xs-offset-4 col-xs-4 cell-border"></span>
+                                </div>
+                            </div>
+
+                            <span class="col-md-1"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <span class="col-md-2"></span>
+            </div>
+
+            <div class="row desktop-border">
+                <span class="col-md-1"></span>
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                        <span class="col-md-3 cell-border"></span>
+                    </div>
+                </div>
+
+                <span class="col-md-1"></span>
+            </div>
+        </div>
+
+        <div class="tablet-table">
+            <div class="row tablet-border">
+                <div class="row">
+                    <span class="col-sm-3 cell-border"></span>
+                    <span class="col-sm-6 cell-border"></span>
+                    <span class="col-sm-3 cell-border"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="col-sm-1"></span>
+
+                <div class="col-sm-10">
+                    <div class="row row-content">
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>jak postępować z niejadkiem</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="col-sm-1"></span>
+            </div>
+
+            <div class="row tablet-border">
+                <div class="row">
+                    <span class="col-sm-3 cell-border"></span>
+                    <span class="col-sm-6 cell-border"></span>
+                    <span class="col-sm-3 cell-border"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="col-sm-1"></span>
+                <div class="col-sm-10">
+
+                    <div class="row row-content">
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>wpływ żywienia na zdrowie</h4>
+                        </div>
+
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>jak postępować z niejadkiem</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <span class="col-sm-1"></span>
+            </div>
+
+            <div class="row tablet-border">
+                <div class="row">
+                    <span class="col-sm-3 cell-border"></span>
+                    <span class="col-sm-6 cell-border"></span>
+                    <span class="col-sm-3 cell-border"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="col-sm-1"></span>
+                <div class="col-sm-10">
+                    <div class="row row-content">
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>wpływ żywienia na zdrowie</h4>
+                        </div>
+
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+                    </div>
+                </div>
+                <span class="col-sm-1"></span>
+            </div>
+
+            <div class="row tablet-border">
+                <div class="row">
+                    <span class="col-sm-3 cell-border"></span>
+                    <span class="col-sm-6 cell-border"></span>
+                    <span class="col-sm-3 cell-border"></span>
+                </div>
+            </div>
+            <div class="row">
+                <span class="col-sm-1"></span>
+                <div class="col-sm-10">
+                    <div class="row row-content">
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>jak postępować z niejadkiem</h4>
+                        </div>
+                    </div>
+                </div>
+                <span class="col-sm-1"></span>
+            </div>
+
+            <div class="row tablet-border">
+                <div class="row">
+                    <span class="col-sm-3 cell-border"></span>
+                    <span class="col-sm-6 cell-border"></span>
+                    <span class="col-sm-3 cell-border"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="col-sm-1"></span>
+                <div class="col-sm-10">
+                    <div class="row row-content">
+                        <div class="col-sm-6 for-parents-cell">
+                            <h4>najistotniejsze składniki w diecie dziecka</h4>
+                        </div>
+                        <div class="col-sm-6 for-parents-cell">
+                        </div>
+                    </div>
+                </div>
+                <span class="col-sm-1"></span>
+            </div>
+
+            <div class="row tablet-border">
+                <div class="row">
+                    <span class="col-sm-3 cell-border"></span>
+                    <span class="col-sm-6 cell-border"></span>
+                    <span class="col-sm-3 cell-border"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ring2"></div>
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+    </div>
+
+</section>
+<section class="logos" id="organizatorzy">
+    <div class="section-line">
+        <hr class="dark-line">
+        <hr class="bright-line">
+    </div>
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>organizatorzy</h2>
+        </div>
+
+        <div class="row">
+            <span class="col-md-1 col-sm-1"></span>
+
+            <div class="col-md-10 col-sm-10">
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                        <h3>Organizatorzy</h3>
+                        <div class="logos-group">
+                            <img src="images/fiteasy_logo.png"/>
+                            <img src="images/fiteasy_logo.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <h3>Patroni</h3>
+                        <div class="logos-group">
+                            <img src="images/fiteasy_logo.png"/>
+                            <img src="images/fiteasy_logo.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <h3>Sponsorzy</h3>
+                        <div class="logos-group last">
+                            <img src="images/fiteasy_logo.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="col-md-1 col-sm-1"></span>
+        </div>
+
+        <a href="#home" data-scroll=""><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+
+    </div>
+
+    <div class="section-line">
+        <hr class="dark-line">
+        <hr class="bright-line">
+    </div>
+</section>
+
+<section class="footer">
+    <div class="footer-logo"></div>
+</section>
+</body>
+</html>

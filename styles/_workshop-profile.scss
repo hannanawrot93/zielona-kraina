@@ -1,0 +1,29 @@
+.workshop-profile {
+  .container {
+    padding: 0 100px;
+    dl {
+      dt {
+        color: $dark-green
+      }
+      dd {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      dd:last-child a {
+        color: $dark-green;
+        text-transform: uppercase;
+      }
+    }
+
+    @include media(phone) {
+      padding: 0;
+      dl {
+        text-align: center;
+      }
+    }
+    @include media(tablet) {
+      padding: 0 40px;
+    }
+  }
+}

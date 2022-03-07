@@ -1,0 +1,12 @@
+.project-background {
+  .container {
+    padding: 0 110px;
+
+    @include media(phone) {
+      padding: 0;
+    }
+    @include media(tablet) {
+      padding: 0 40px;
+    }
+  }
+}

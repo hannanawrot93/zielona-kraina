@@ -1,0 +1,16 @@
+.footer {
+  padding-bottom: 40px;
+  border-bottom: 50px solid $dark-green;
+  .footer-logo {
+    margin: 10px auto;
+    background: url("../images/footer-logo.png") no-repeat;
+    background-position: center;
+    width: 454px;
+    height: 131px;
+  }
+  @include media(phone) {
+    .footer-logo {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.for-parents {
+  .row-content {
+    padding: 0 20px;
+  }
+  .cell-border {
+    background: url("../images/slice_11_4.png") no-repeat;
+    background-position: center;
+    height: 52px;
+  }
+  .for-parents-cell {
+    padding: 0 40px;
+  }
+  @include media(phone) {
+    .tablet-table {
+      display: none;
+    }
+    .desktop-table {
+      display: block;
+    }
+    .desktop-border {
+      display: none;
+    }
+    .phone-border {
+      display: block;
+    }
+  }
+
+  @include media(tablet) {
+    .tablet-table {
+      display: block;
+    }
+    .desktop-table {
+      display: none;
+    }
+    .phone-border {
+      display: none;
+    }
+  }
+
+  @include media(medium-screens) {
+    .tablet-table {
+      display: none;
+    }
+    .desktop-table {
+      display: block;
+    }
+    .phone-border {
+      display: none;
+    }
+  }
+
+  @include media(wide-screens) {
+    .tablet-table {
+      display: none;
+    }
+    .desktop-table {
+      display: block;
+    }
+    .phone-border {
+      display: none;
+    }
+  }
+}

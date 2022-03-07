@@ -1,0 +1,212 @@
+$dark-green: #018136;
+$bright-green: #80bd00;
+$grey-text: #858585;
+$grey-background: #ececec;
+$white-background: #fff;
+$grey-menu: #575556;
+$wide-screen-width: 1152px;
+$medium-screen-width: 920px;
+$tablet-screen-width: 660px;
+$phone-screen-width: 300px;
+
+@import "mixins";
+@import "menu";
+@import "slider";
+@import "project-background";
+@import "news";
+@import "gallery";
+@import "workshop-profile";
+@import "tutorials";
+@import "for-parents";
+@import "logos";
+@import "footer";
+h2 {
+  font-size: 21px;
+  text-transform: uppercase;
+  color: $dark-green;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 80px;
+  @include media(phone) {
+    padding-top: 65px;
+    margin-top: 0;
+  }
+
+}
+
+h3 {
+  font-size: 20px;
+  color: $grey-menu;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 22px;
+  @include media(phone) {
+    margin-left: 20px;
+  }
+}
+
+h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: $dark-green;
+  margin-top: 20%;
+  margin-bottom: 20px;
+
+  @include media(phone) {
+    margin-top: 0;
+  }
+  @include media(tablet) {
+    margin-top: 0;
+  }
+}
+
+h6 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 22px;
+  color: $white-background;
+  text-align: center;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.fa-arrow-up {
+  color: $dark-green;
+  display: block !important;
+  margin: 50px auto;
+  text-align: center;
+
+  @include media(phone) {
+    margin: 30px auto;
+  }
+  @include media(tablet) {
+    margin: 30px auto;
+  }
+  @include media(medium-screens) {
+    margin: 40px auto;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 17px;
+  text-align: justify;
+  margin-bottom: 22px;
+}
+
+.container {
+  margin: auto !important;
+
+  @include media(wide-screens) {
+    width: $wide-screen-width;
+  }
+  @include media(medium-screens) {
+    width: $medium-screen-width;
+  }
+  @include media(tablet) {
+    width: $tablet-screen-width;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media(phone) {
+    width: $phone-screen-width;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+body {
+  padding-top: 171px;
+  color: $grey-text;
+
+  @include media(phone) {
+    padding-top: 71px;
+  }
+  @include media(tablet) {
+    padding-top: 101px;
+  }
+  @include media(medium-screens) {
+    padding-top: 181px;
+  }
+
+  .for-parents, .news, .footer, .project-background, .workshop-profile, .gallery, .tutorials, .logos {
+    padding-top: 40px;
+  }
+
+  .for-parents, .news, .footer {
+    background-color: $grey-background;
+  }
+  .section-title {
+    margin: auto;
+    margin-bottom: 40px;
+    display: block;
+    height: 140px;
+    width: 400px;
+    background: url(../images/header.png) no-repeat;
+
+    @include media(phone) {
+      height: 120px;
+      width: 300px;
+      background-size: cover;
+    }
+
+  }
+  .section-line {
+    .dark-line {
+      border-top: 4px solid $dark-green;
+      margin-bottom: 4px;
+      margin-top: 25px;
+    }
+    .bright-line {
+      margin-top: 0;
+      border-top: 9px solid $bright-green;
+    }
+  }
+  .ring {
+    background: url("../images/slice_5_8.png");
+    height: 60px;
+    width: 60px;
+    margin: 15px auto;
+  }
+  .ring2 {
+    background: url("../images/slice_13_2.png");
+    height: 80px;
+    width: 70px;
+    margin: 30px auto;
+  }
+  .arrow-container {
+    width: 24px;
+    height: 15px;
+    margin: 50px auto;
+    .arrow {
+      display: inline-block;
+      background: url("../images/strzalka.png");
+      height: 15px;
+      width: 24px;
+    }
+  }
+  .arrow-container-small {
+    width: 17px;
+    height: 11px;
+    .arrow {
+      display: inline-block;
+      background: url("../images/strzalka2.png");
+      height: 11px;
+      width: 17px;
+    }
+  }
+}
+
+

@@ -1,0 +1,20 @@
+.slider {
+  .carousel-control {
+    &.left, &.right {
+      background: none !important;
+      filter: none !important;
+      progid:none !important;
+    }
+  }
+
+    .carousel-inner>.item>img{
+      @include media(phone) {
+        height: 220px;
+      }
+      @include media(tablet) {
+        height: 330px;
+      }
+    }
+
+
+}
